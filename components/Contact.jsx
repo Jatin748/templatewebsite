@@ -78,7 +78,6 @@ const ContactSection = () => {
                   type="text"
                   name="first_name"
                   id="first_name"
-                  autoComplete="given-name"
                   required
                   className="mt-1 block w-full shadow-md sm:text-sm border-gray-300 rounded-md p-2 focus:outline-none"
                 />
@@ -94,7 +93,6 @@ const ContactSection = () => {
                   type="text"
                   name="last_name"
                   id="last_name"
-                  autoComplete="family-name"
                   required
                   className="mt-1 block w-full shadow-md sm:text-sm border-gray-300 rounded-md p-2 focus:outline-none"
                 />
