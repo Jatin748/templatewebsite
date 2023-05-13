@@ -1,17 +1,58 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 const Domain = () => {
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+    },
+  };
+  const divVariants = {
+    hidden: {
+      x: 250,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.5,
+        delay: 0.8,
+      },
+    },
+  };
   return (
     <div className="lg:flex bg-white items-center justify-around p-10 lg:p-20 md:p-20">
       <div className="flex flex-col items-center justify-center text-center mb-10 md:mb-0 lg:mb-0 gap-1">
-        <h2 className="font-bold text-xl lg:text-2xl md:text-2xl uppercase mb-0">
+        <motion.h2
+          className="font-bold text-xl lg:text-2xl md:text-2xl uppercase mb-0"
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           Search your domain name
-        </h2>
-        <span className=" text-center text-sm md:text-base text-[rgba(0,0,0,0.7)]">
+        </motion.h2>
+        <motion.span
+          className=" text-center text-sm md:text-base text-[rgba(0,0,0,0.7)]"
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           Lorem ipsum dolor sit amet consectetur assumenda
-        </span>
+        </motion.span>
       </div>
-      <div className="md:bg-[#6927ff] lg:bg-[#6927ff] lg:rounded-tl-[50px] lg:rounded-br-[50px] flex lg:w-1/2 md:w-1/2 justify-center md:p-12 shadow-sm flex-col">
+      <motion.div
+        className="md:bg-[#6927ff] lg:bg-[#6927ff] lg:rounded-tl-[50px] lg:rounded-br-[50px] flex lg:w-1/2 md:w-1/2 justify-center md:p-12 shadow-sm flex-col"
+        variants={divVariants}
+        animate="visible"
+        initial="hidden"
+      >
         <div className="flex mb-8 md:mb-4">
           <input
             type="text"
@@ -53,7 +94,7 @@ const Domain = () => {
             .io<span className="text-[#38d39f] text-base px-1">&#36;9.95</span>
           </span>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
