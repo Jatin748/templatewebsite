@@ -59,7 +59,7 @@ const Domain = () => {
             placeholder="Enter domain name.."
             className="rounded-tl-md rounded-bl-md focus:outline-slate-400 w-11/12 p-3 md:p-5 lg:p-5 shadow-sm border"
           />
-          <select class="block bg-white px-2 lg:px-4 md:px-4 py-2 border shadow-sm leading-tight focus:bg-gray-100 focus:outline-slate-300">
+          <select className="block bg-white px-2 lg:px-4 md:px-4 py-2 border shadow-sm leading-tight focus:bg-gray-100 focus:outline-slate-300">
             <option>.com</option>
             <option>.net</option>
             <option>.biz</option>
