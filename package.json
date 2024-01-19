@@ -13,7 +13,7 @@
     "@next/font": "^13.3.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
+    "eslint-config-next": "14.1.0",
     "framer-motion": "^10.12.7",
     "git": "^0.1.5",
     "link": "^1.5.1",
